@@ -1,0 +1,190 @@
+*{padding: 0;margin: 0;/* akan menekan padding ke dalam */box-sizing: border-box;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    /*  
+        Satuan pada css
+
+        1. Fix
+            - px
+            - cm
+
+        2. Flexible
+
+            div : width: 100px, height: 200px , font-size: 15px
+
+            - %
+                Akan mengambil nilai dari parent
+                
+                width: 150%
+                100 x 1.5 = 150px
+
+                font-size: 150%
+                15 x 1.5 = 22.5px
+
+                height: 150%
+                200 x 1.5 = 300px
+
+            - em
+                Akan berpatokan dengan ukuran font parent
+                width: 1.5em
+                15 x 1.5 = 22.5px
+
+                font-size: 1.5em
+                15 x 1.5 = 22.5px
+
+                height: 1.5em
+                15 x 1.5 = 22.5px
+
+    */
+    font-size: 1.5em;
+    display: grid;
+    grid-template-rows: 130px 800px 200px;
+}
+
+.navbar {
+    background: linear-gradient(to right,
+    rgb(7, 211, 201),
+    rgb(56, 235, 101),
+    rgb(179, 238, 69)
+    )
+}
+
+.content {
+    background-image: url('./pictures/black-background.jpg');
+    background-position: center;
+}
+
+.footer {
+    background: white
+}
+
+/* tag ul yang ada di dalam tag nav */
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+
+    /* Menghilangkan style default list (dot) */
+    list-style: none;
+}
+
+nav li {
+    padding: 1em 0
+}
+
+
+nav li a {
+    color: white;
+    font-weight: 700;
+
+    /* menghilankan default a, underline, blue & purple color */
+    text-decoration: none;
+
+    /* transparent, 0 - 1 */
+    opacity: 0.6;
+}
+
+/* mengharahkan kursor ke tag a */
+nav li a:hover {
+    opacity: 1;
+}
+
+.hero {
+    /* lebar maksimal 960px, dapat mengecil jika parentnya di kecilkan */
+    max-width: 960px;
+    margin: 15px auto;
+    text-align: center;
+    color: rgb(124, 124, 124)
+}
+
+/* tag image yang ada di dalam tag apapun yang memiliki class hero */
+.hero img {
+    width: 200px;
+    /* max value : 100px, jika di tulis lebih dari 100 tidak akan error, namun efek sama dengan jika value 100px */
+    border-radius: 100px
+}
+
+.hero h1 {
+    font-size: 2em;
+    font-weight: 300;
+    color: rgb(192, 190, 190);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 48px;
+    margin-top: 30px; 
+    border-radius: 40px;
+    color: white;
+    background-color: rgb(204, 34, 139);
+    font-weight: 700;
+    text-decoration: none;
+
+    /* agar transisi jika di hover membutuhkan waktu 0.3 detik */
+    transition: .3s
+}
+
+/* styling ketika kursor mendekat (hover) */
+.btn:hover {
+    /* box-shadow: offset-x offset-y blur spread color */
+    box-shadow: 0 20px 30px 0 rgb(133, 59, 182);
+
+    /* Menaikkan element dari posisi asli sejauh 3px */
+    transform: translateY(-3px)
+}
+
+/* styling ketika di click */
+.btn:active {
+    /* box-shadow: offset-x offset-y blur spread color */
+    box-shadow: 0 10px 20px 0 rgb(252, 0, 0);
+
+    /* Menaikkan element dari posisi asli sejauh 3px */
+    transform: translateY(-1px)
+}
+
+footer ul {
+    max-width: 640px;
+    margin: 48px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center
+}
+
+footer ul li {
+    list-style: none;
+    font-size: 50px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* paragraf yang ada di dalam tag div */
+div p {
+
+}
+
+/* paragraf yang ada di dalam tag div yang memiliki class container */
+div.container p {
+
+}
